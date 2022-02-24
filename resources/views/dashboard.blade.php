@@ -9,35 +9,21 @@
 
 @section('grafik')
     <script type="text/javascript">
-        // globals Chart:false, feather:false
         var total = <?php echo json_encode($total); ?>;
-        // var bulan = <?php echo json_encode($bulan); ?>;
-        // Graphs
-        var ctx = document.getElementById('myChart')
-        // eslint-disable-next-line no-unused-vars
+
+        var ctx = document.getElementById('myChart');
+
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: [
-                    'january',
-                    'february',
-                    'Maret',
-                    'April',
-                    'Mei',
-                    'Juni',
-                    'July',
-                    'Agustus',
-                    'September',
-                    'Oktober',
-                    'November',
-                    'Desember',
-                ],
+                labels: <?php echo json_encode($bulan); ?>,
                 datasets: [{
+                    label: 'Data Certificates',
                     data: total,
                     lineTension: 0,
                     backgroundColor: 'transparent',
                     borderColor: '#007bff',
-                    borderWidth: 4,
+                    borderWidth: 0,
                     pointBackgroundColor: '#007bff'
                 }]
             },
@@ -50,7 +36,7 @@
                     }]
                 },
                 legend: {
-                    display: false
+                    display: true
                 }
             }
         });

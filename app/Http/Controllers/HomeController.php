@@ -32,6 +32,7 @@ class HomeController extends Controller
 
         $bulan = Certificate::select(DB::raw("MONTHNAME(created_at) as bulan"))
             ->GroupBy(DB::raw("MONTHNAME(created_at)"))
+            ->orderBy('created_at', 'asc')
             ->pluck('bulan');
         // dd($total);
 

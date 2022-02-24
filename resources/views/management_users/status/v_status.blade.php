@@ -45,7 +45,7 @@
                     <td data-label="Name">{{ $data->nama_status }}</td>
                     <td data-label="Created at">{{ $data->created_at }}</td>
                     <td data-label="Action">
-                        <form action="{{ route('user.destroy', $data->id) }}" method="POST">
+                        <form action="{{ route('status.destroy', $data->id) }}" method="POST">
                             <a href="#" type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="modal"
                                 data-bs-target="#editModal{{ $data->id }}">
                                 <i class="fa-solid fa-pen-to-square"></i>

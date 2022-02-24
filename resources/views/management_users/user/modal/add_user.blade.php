@@ -45,7 +45,8 @@
                                 class="col-md-4 col-form-label text-md-left">{{ __('Password') }}</label>
 
                             <div class="col-md-8">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" type="password" value="123456" class="form-control"
+                                    name="password" readonly required>
                             </div>
                         </div>
 

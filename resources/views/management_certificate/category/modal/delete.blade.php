@@ -7,7 +7,7 @@
                 <h5 class="modal-title" id="exampleModalLabel">Delete category </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="POST" action="{{ route('status.destroy', $data->id) }}">
+            <form method="POST" action="{{ route('category.destroy', $data->id) }}">
                 @csrf
                 <div class="modal-body">
                     <a>Are you sure want to delete <b> {{ $data->nama_category }} </b> ?</a>

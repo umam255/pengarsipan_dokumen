@@ -6,7 +6,7 @@
                     <h5 class="modal-title" id="exampleModalLabel">Add category</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form method="POST" action="{{ route('status.store') }}">
+                <form method="POST" action="{{ route('category.store') }}">
                     @csrf
                     <div class="modal-body">
                         <div class="row mb-3">

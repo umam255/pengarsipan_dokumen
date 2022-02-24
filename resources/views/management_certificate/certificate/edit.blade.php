@@ -25,9 +25,12 @@
 
                     <div class="col-md-3 mb-2">
                         <select id="status" class="form-control" name="category" required>
-                            <option value="{{ $certificate->id }}" style="text-align: center">
-                                {{ $certificate->category->nama_category }}</option>
+
                             @foreach ($categories as $data)
+                                <option value="{{ $data->id }}" style="text-align: center">
+                                    {{ $certificate->category->nama_category }}
+                                </option>
+
                                 <option value="{{ $data->id }}">
                                     {{ $data->nama_category }}
                                 </option>

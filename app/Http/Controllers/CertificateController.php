@@ -69,12 +69,13 @@ class CertificateController extends Controller
                 $insert[$key]['upload_by'] = $upload_by;
                 $insert[$key]['created_at'] = date('Y-m-d H:i:s');
             }
+
+            Certificate::insert($insert);
+
+            return redirect()->route('certificate.index')->with('succes', 'Document berhasil diupload');
+        } else {
+            return redirect()->route('certificate.index')->with('error', 'Multiple File has been uploaded Successfully');
         }
-
-
-        Certificate::insert($insert);
-
-        return redirect()->route('certificate.index')->with('status', 'Multiple File has been uploaded Successfully');
     }
 
     /**
